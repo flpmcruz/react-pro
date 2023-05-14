@@ -1,8 +1,6 @@
-import { BrowserRouter } from 'react-router-dom';
-import { Routes, Route, NavLink, Navigate } from 'react-router-dom';
-
-import logo from '../assets/react.svg'
+import { BrowserRouter, Routes, Route, NavLink, Navigate } from 'react-router-dom';
 import { ShoppingPage } from '../02-components-patterns/pages/ShoppingPage';
+import logo from '../assets/react.svg'
 
 export const Navigation = () => {
     return (
@@ -23,12 +21,10 @@ export const Navigation = () => {
                     </ul>
                 </nav>
 
-
                 <Routes>
                     <Route path="about" element={<h1>About Page</h1>} />
                     <Route path="users" element={<h1>Users Page</h1>} />
-                    <Route path="home" element={<ShoppingPage/>} />
-
+                    <Route path="home" element={<ShoppingPage />} />
                     <Route path="/*" element={<Navigate to="/home" replace />} />
                 </Routes>
 

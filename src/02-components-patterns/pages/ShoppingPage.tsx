@@ -1,6 +1,7 @@
 import { ProductButtons, ProductCard, ProductImage, ProductTitle } from "../components"
+import { Product } from "../interfaces/interfaces"
 
-const product = {
+const product: Product = {
     id: '1',
     title: 'Coffe Mug',
     img: './coffee-mug.png'
@@ -17,7 +18,6 @@ export const ShoppingPage = () => {
                 msFlexDirection: 'row',
                 flexWrap: 'wrap'
             }}>
-
                 <ProductCard product={product} >
                     <ProductCard.Image />
                     <ProductCard.Title title="Titulo de prueba" />
