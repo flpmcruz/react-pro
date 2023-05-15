@@ -1,5 +1,6 @@
 import { ProductButtons, ProductCard, ProductImage, ProductTitle } from "../components"
 import { Product } from "../interfaces/interfaces"
+import '../styles/custom-styles.css'
 
 const product: Product = {
     id: '1',
@@ -18,16 +19,42 @@ export const ShoppingPage = () => {
                 msFlexDirection: 'row',
                 flexWrap: 'wrap'
             }}>
-                <ProductCard product={product} >
-                    <ProductCard.Image />
-                    <ProductCard.Title title="Titulo de prueba" />
-                    <ProductCard.Buttons />
+                {/* Ejemplo con propiedades internas */}
+                <ProductCard
+                    product={product}
+                    className="bg-dark text-white"
+                >
+                    <ProductCard.Image className="custom-image" />
+                    <ProductCard.Title
+                        title="Titulo de prueba"
+                        className=" text-bold"
+                    />
+                    <ProductCard.Buttons className="custom-buttons" />
                 </ProductCard>
 
-                <ProductCard product={product} >
-                    <ProductImage />
-                    <ProductTitle />
-                    <ProductButtons />
+                <ProductCard
+                    product={product}
+                    className="bg-dark text-white"
+                >
+                    <ProductImage className="custom-image" />
+                    <ProductTitle className=" text-bold" />
+                    <ProductButtons className="custom-buttons" />
+                </ProductCard>
+
+                {/* Recibiendo styles */}
+                <ProductCard
+                    product={product}
+                    className="bg-dark text-white"
+                    style={{
+                        backgroundColor: '#70D1F8'
+                    }}
+                >
+                    <ProductImage className="custom-image" />
+                    <ProductTitle className=" text-bold" />
+                    <ProductButtons className="custom-buttons" style={{
+                        display: 'flex',
+                        justifyContent: 'end'
+                    }}/>
                 </ProductCard>
             </div>
         </div>
