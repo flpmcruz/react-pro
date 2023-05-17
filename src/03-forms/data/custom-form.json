@@ -1,0 +1,70 @@
+[
+  {
+    "type": "text",
+    "name": "firstName",
+    "placeholder": "Tu Nombre",
+    "label": "Nombre",
+    "value": "",
+    "validations": [
+      {
+        "type": "required",
+        "message": "El nombre es requerido"
+      },
+      {
+        "type": "minLength",
+        "message": "El nombre debe tener al menos 3 caracteres",
+        "value": 3
+      }
+    ]
+  },
+  {
+    "type": "email",
+    "name": "email",
+    "placeholder": "Tu Email",
+    "label": "Email",
+    "value": "",
+    "validations": [
+      {
+        "type": "required",
+        "message": "El Email es requerido"
+      },
+      {
+        "type": "email",
+        "message": "No es un correo valido"
+      }
+    ]
+  },
+  {
+    "type": "password",
+    "name": "password",
+    "placeholder": "Password",
+    "label": "Password",
+    "value": "",
+    "validations": [
+      {
+        "type": "required",
+        "message": "El password es requerido"
+      }
+    ]
+  },
+  {
+    "type": "select",
+    "name": "favoriteGame",
+    "label": "Favorite Game",
+    "value": "",
+    "options": [
+      {
+        "id": "1",
+        "label": "League of Legends"
+      },
+      {
+        "id": "2",
+        "label": "Dota 2"
+      },
+      {
+        "id": "3",
+        "label": "Counter Strike"
+      }
+    ]
+  }
+]
